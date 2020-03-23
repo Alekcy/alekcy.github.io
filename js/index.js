@@ -56,7 +56,7 @@ function introType() {
   .type("-  Take part in the development of two applications on React native.")
   .break({delay: 1000})
   .break({delay: 1000})
-  .type("<b style='font-size: 30px;'>_______________________________________________________</b>")
+  .type("<b style='font-size: 30px;'>__END OF FILE__</b>")
   .go();
 
 
