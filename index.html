@@ -2,14 +2,21 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title></title>
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="js/index.js"></script>
   </head>
   <body>
     <div id="scanline"></div>
     <div id="monitor">
-      <div class="meter">
-          <span style="width:100%;"><span class="progress"></span></span>
+      <div id="loader-container">
+        <div id="loader-wrapper">
+          <div id="loader-text">Loading...</div>
+          <div id="loader">
+              <span style="width:100%;"><span class="progress"></span></span>
+          </div>
+        </div>
       </div>
     </div>
   </body>
