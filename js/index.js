@@ -22,8 +22,43 @@ function loadingEnd() {
 
 function introType() {
   new TypeIt("#input-container", {
-    strings: ["This is a great string.", "But here is a better one."],
-    speed: 50,
+    speed: 5,
     waitUntilVisible: false
-  }).go();
+  })
+  .type("Loading complete")
+  .break({delay: 1000})
+  .type("Check access")
+  .pause(500).type('.')
+  .pause(500).type('.')
+  .pause(500).type('.')
+  .break({delay: 1000})
+  .type("Access granted")
+  .break().break()
+  .type("First name: Aleksey")
+  .break({delay: 1000})
+  .type("Last name: Volkov")
+  .break({delay: 1000})
+  .type("Country: Russia")
+  .break({delay: 1000})
+  .type("Birth date: 08.09.1998")
+  .break({delay: 1000})
+  .break({delay: 1000})
+  .type("<b style='font-size: 30px;'>Work experience:</b>")
+  .break({delay: 1000})
+  .type(" * Angels IT. FullStack Web Developer")
+  .break({delay: 1000})
+  .type("   October 2017 — august 2019")
+  .break({delay: 1000})
+  .type("-  Developed from scratch a large SPA project on JS (MOBX), as well as a backend and admin panel on Symfony.")
+  .break({delay: 1000})
+  .type("-  A system for developing navigation in stores for convenient product searches.")
+  .break({delay: 1000})
+  .type("-  Take part in the development of two applications on React native.")
+  .break({delay: 1000})
+  .break({delay: 1000})
+  .type("<b style='font-size: 30px;'>_______________________________________________________</b>")
+  .go();
+
+
+
 }
