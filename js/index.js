@@ -2,8 +2,16 @@ document.addEventListener("DOMContentLoaded", onLoad);
 
 var text = null;
 
+document.getElementById('color-btn-blue').addEventListener('click', function () {changeBackgroundColor('#0101d4')})
+document.getElementById('color-btn-black').addEventListener('click', function () {changeBackgroundColor('black')})
+document.getElementById('color-btn-green').addEventListener('click', function () {changeBackgroundColor('green')})
+
+function changeBackgroundColor(color) {
+  document.getElementsByTagName("body")[0].style.background = color;
+  document.getElementsByTagName("header")[0].style.background = color;
+}
+
 function onLoad() {
-  console.log('load')
   languageBtnInit()
   setTimeout(loadingEnd, 3000)
 }
