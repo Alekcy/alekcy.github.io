@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", onLoad);
 
 var text = null;
+var lang = 'en';
 
 document.getElementById('color-btn-blue').addEventListener('click', function () {changeBackgroundColor('#0101d4')})
 document.getElementById('color-btn-black').addEventListener('click', function () {changeBackgroundColor('black')})
@@ -11,6 +12,16 @@ function changeBackgroundColor(color) {
   document.getElementsByTagName("header")[0].style.background = color;
 }
 
+function downloadPDF() {
+  var link = document.createElement("a");
+  link.target = '_blank';
+  link.href = lang === 'en' ? 'pdf/resume.pdf' : 'pdf/resume_ru.pdf';
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+  delete link;
+}
+
 function onLoad() {
   languageBtnInit()
   setTimeout(loadingEnd, 3000)
@@ -19,9 +30,11 @@ function onLoad() {
 function languageBtnInit() {
   if (window.location.hash && window.location.hash === '#ru') {
     document.getElementById('lang-btn-ru').prepend('* ')
+    lang = 'ru'
     loadText('ru')
   } else {
     document.getElementById('lang-btn-eng').prepend('* ')
+    lang = 'en'
     loadText('en')
   }
 }

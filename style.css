@@ -196,7 +196,6 @@ a {
 }
 
 #monitor {
-  animation: textShadow 1.6s infinite;
   width: 100%;
   height: 100vh;
 }
@@ -278,6 +277,7 @@ a {
   padding: 10vh 1vw;
   width: 98vw;
   overflow: auto;
+  animation: textShadow 1.6s infinite;
 }
 
 header {
@@ -324,8 +324,22 @@ header>div {
   background: green;
 }
 
+.save-pdf-btn {
+  background: white;
+  padding: 0 10px;
+  cursor: pointer;
+  display: flex;
+}
+
+.save-pdf-btn > span {
+  color: black;
+}
+
 @media only screen and (max-width: 600px) {
   #lang-btn-eng {
     margin-right: 5px;
+  }
+  .save-pdf-btn > span {
+    display: none;
   }
 }
